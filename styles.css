@@ -64,3 +64,32 @@ section { padding: 24px 0; }
   .hero h1 { font-size: 2.3rem; }
   .btn { width: 100%; }
 }
+
+
+.photo-showcase { padding: 18px 0 6px; }
+.photo-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 20px; }
+.photo-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.86);
+  box-shadow: var(--shadow);
+}
+.photo-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+.photo-card figcaption {
+  padding: 14px 16px 16px;
+  color: var(--muted);
+  font-size: .95rem;
+  line-height: 1.5;
+}
+.photo-card figcaption strong { display: block; color: var(--text); margin-bottom: 4px; }
+@media (max-width: 860px) {
+  .photo-grid { grid-template-columns: 1fr; }
+  .photo-card img { height: 220px; }
+}
